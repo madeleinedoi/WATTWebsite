@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space:normal;
 
 }
-.bar .bar-item {
+.bar .bar-button {
     padding: 8px 16px;
     float: left;
     width: auto;
@@ -189,31 +189,78 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
 }
 
-/*Picture Header*/
-/*.content{*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*}*/
 .display-container{
     position: relative;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 4px;
 }
-/*.wide{*/
-/*    letter-spacing: 4px;*/
-/*}*/
-.image{
+
+.image-banner{
         max-width: 100%;
         height:auto;
         vertical-align: middle;
         border-style: none;
 
-    }
-/*img{*/
-/*    vertical-align: middle;*/
-/*    border-style: none;*/
-/*}*/
+}
+/*!* One Mission *!*/
+.row-mission{
+    /*width: 50%;*/
+}
+.col-mission{
+    float:left;
+    /*width: 100%;*/
+}
+.content-mission{
+    margin-left: auto;
+    margin-right: auto;
+}
+.padding-mission64{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.padding-mission1224{
+    padding: 12px 24px;
+}
+.hide-small-mission{
+    display:none;
+}
+.img-mission{
+    max-width: 200px;
+    height: auto;
+    vertical-align:middle;
+    border-style: none;
+    border-radius: 4px;
+    opacity: 0.75;
+}
+.largefont-mission{
+    font-size: 18px;
+}
+text-grey-mission{
+    color: #757575;
+}
+tag-mission{
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px
+}
+.col-mission .m6{
+    width:  49.9999%
+}
+hr{
+    width:100%;
+}
+
+
+
 
 
 
