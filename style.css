@@ -201,7 +201,6 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 4px;
 }
 .image{
-    max-width{
         max-width: 100%;
         height:auto;
 
@@ -209,20 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 img{
     vertical-align: middle;
     border-style: none;
-}
-.padding-large{
-    padding: 12px 24px;
-}
-.opacity{
-    opacity: 0.60;
-}
-.display-bottomLeft{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.allusionfont{
-font-size: 36px;
+    height:auto;
 }
 
 
