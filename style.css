@@ -260,10 +260,15 @@ hr{
 }
 /*CALENDAR*/
 
-.view-cap, .view-container-border
-{
-    background-color: #ffdff1
+/*Core TEAM*/
+.center{
+    text-align: center;
 }
+.text-grey{
+    color: #757575;
+}
+
+
 
 
 
