@@ -270,14 +270,13 @@ hr{
 .padding-right-team{
     width:500px;
     float:left;
-    overflow: hidden;
+
 
 }
 .padding-left-team{
     width:500px;
     float:right;
-    margin-left: 25px;
-    overflow:hidden;
+    margin-left: 50px;
 }
 
 
