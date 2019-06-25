@@ -260,6 +260,10 @@ hr{
 }
 /*CALENDAR*/
 
+.view-cap, .view-container-border
+{
+    background-color: #ffdff1
+}
 
 
 
