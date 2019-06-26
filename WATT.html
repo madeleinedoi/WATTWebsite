@@ -74,7 +74,8 @@
             <br>Their inspiration for starting WATT is rooted in the mentorship that they received as young women, and the belief that continuing the cycle of mentorship is an opportunity to grow
             personally and to uplift the computer science field for women.</p><br>
         <br>
-        <img src="https://static.wixstatic.com/media/cfb250_cce08d55220a4e3793ed8474dfc4be3b~mv2_d_3024_4032_s_4_2.jpeg/v1/fill/w_1182,h_1574,fp_0.50_0.50,q_90/cfb250_cce08d55220a4e3793ed8474dfc4be3b~mv2_d_3024_4032_s_4_2.jpeg?retry=1" alt="Pavvnee" align="left" height="925" width="500" style="padding-right: 10px">
+        <img src="https://static.wixstatic.com/media/cfb250_cce08d55220a4e3793ed8474dfc4be3b~mv2_d_3024_4032_s_4_2.jpeg/v1/fill/w_1182,h_1574,fp_0.50_0.50,q_90/cfb250_cce08d55220a4e3793ed8474dfc4be3b~mv2_d_3024_4032_s_4_2.jpeg?retry=1" alt="Pavvnee" align="left" height="500" width="500" style="padding-right: 10px">
+        <img src="https://static.wixstatic.com/media/cfb250_78fe4290f24045e8a9247ca656af7b08~mv2_d_2176_3788_s_2.jpg/v1/fill/w_240,h_240,al_c,q_80,usm_0.66_1.00_0.01/cfb250_78fe4290f24045e8a9247ca656af7b08~mv2_d_2176_3788_s_2.jpg" alt="Pavvnee" align="left" height="500" width="500" style="padding-right: 10px">
     </div>
 
     <div class="padding-right-team">
@@ -159,5 +160,65 @@
     </div>
 
 <hr>
+    <button class="accordion">How did WATT start?</button>
+    <div class="panel">
+        <p>
+            WATT is a non-profit organization founded by 2 Holy Names graduates, Mackenzie Jorgensen and Laura Debolt, as a way to introduce girls to computer science at a young age.
+            Mackenzie and Laura graduated from Holy Names Academy in 2016. Both are studying Computer Science, Mackenzie at Villanova and Laura at University of Washington.</p>
+    </div>
+    <button class="accordion">Why should I sign up my daughter for WATT?</button>
+    <div class="panel">
+        <p>WATT is a great way to introduce girls to computer science. Being female based makes WATT an inclusive environment for girls in a field that is male dominated. WATT is focused on
+            empowering girls while teaching them important skills in computer science.</p>
+    </div>
+
+    <button class="accordion">Can my son join WATT?</button>
+    <div class="panel">
+        <p>While WATT is focused on empowering girls, especially in the STEM field, we will not turn away boys that are interested in joining. Boys that want to join should be open minded towards
+            WATT being female based.</p>
+    </div>
+    <button class="accordion">How does WATT work?</button>
+    <div class="panel">
+        <p>WATT meets once a week for six weeks. There are two sessions at every school, session A and B. Session A focuses on the fundamentals of java and game development. Session B introduces
+            html and website development. Classes have an introduction video about computer science or women in STEM, a discussion about the video, a warm up activity to introduce the day's concept,
+            snack, the main lesson, and a wrap up activity.</p>
+    </div>
+    <button class="accordion">What will my child be learning?</button>
+    <div class="panel">
+        <p>Session A introduces students to the basic fundamentals of java and how to apply those concepts in game development. Session B is centered around web development - the students will be
+            learning how to create their own basic web page using html.</p>
+    </div>
+    <button class="accordion">How can I contact WATT?</button>
+    <div class="panel">
+        <p>Feel free to email us at wattcoding@gmail.com. You can also visit our facebook page and instagram for updates on what we're doing.
+            Facebook: www.facebook.com/wattcoding
+            Instagram: @wattcoding</p>
+    </div>
+    <button class="accordion">Can I connect with WATT on social media?</button>
+    <div class="panel">
+        <p>Check out our facebook and instagram page for pictures!
+            Facebook: www.facebook.com/wattcoding
+            Instagram: @wattcoding.</p>
+    </div>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+
 </body>
 </html>
