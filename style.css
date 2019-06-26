@@ -270,6 +270,7 @@ hr{
 .padding-right-team{
     width:500px;
     float:left;
+    overflow: auto;
 
 
 }
@@ -277,15 +278,25 @@ hr{
     width:500px;
     float:right;
     margin-left: 50px;
+    overflow: auto;
 }
+.float-right{
+    float:right;
+    overflow: hidden;
+    margin-right: 100px;
+}
+
 
 .founders{
     float:right;
 }
 .founders-image{
-
     float:left;
+    overflow: hidden;
+    margin-left: 100px;
 }
+
+/*SCHOOLS*/
 
 .schools{
     display: inline-block;
