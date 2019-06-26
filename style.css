@@ -315,7 +315,8 @@ hr{
 
 #stT {
     display: inline-block;
-    margin:0 auto;
+    /*margin-bottom: 1000px;*/
+    /*margin:0 auto;*/
     /*width:100px;*/
 }
 
