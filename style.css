@@ -384,3 +384,12 @@ hr{
     opacity: 0.5; 
     padding-top: 5px;"
 }
+.display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    float:right;
+}
+.w3-opacity, .w3-hover-opacity:hover {
+    opacity: 0.60;
+}
