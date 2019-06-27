@@ -389,7 +389,8 @@ hr{
     left: 0;
     bottom: 0;
     float:right;
+
 }
-.w3-opacity, .w3-hover-opacity:hover {
+.opacity, .hover-opacity:hover {
     opacity: 0.60;
 }
