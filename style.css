@@ -259,7 +259,9 @@ hr{
     width:100%;
 }
 /*CALENDAR*/
-
+#calendar-image{
+    margin: -10% 0 -10% 0;
+}
 /*Core TEAM*/
 .center{
     text-align: center;
