@@ -332,6 +332,10 @@ hr{
     position: relative;
     max-width: 800px; /* Maximum width */
     margin: 0 auto; /* Center it */
+    opacity:0;
+}
+.container:hover{
+    opacity: 0.95;
 }
 
 .container .content {
