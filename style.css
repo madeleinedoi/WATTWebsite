@@ -376,3 +376,11 @@ hr{
     /*align-content: center;*/
     display:inline-block;
 }
+
+.typeform-widget{
+    font-family: Sans-Serif, serif;
+    font-size: 12px;
+    color: #999;
+    opacity: 0.5; 
+    padding-top: 5px;"
+}
