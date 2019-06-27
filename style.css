@@ -348,7 +348,7 @@ hr{
 
 /*FAQ*/
 .accordion {
-    background-color: #eee;
+    background-color: ghostwhite;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -361,7 +361,7 @@ hr{
 }
 
 .active, .accordion:hover {
-    background-color: rgba(255, 223, 234, 0.9);
+    background-color: pink;
 }
 
 .panel {
