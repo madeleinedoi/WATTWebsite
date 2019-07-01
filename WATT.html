@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type=logo" href="logo.png"/>
+
 </head>
 <body>
 <div class="top-nav">
@@ -18,7 +19,15 @@
             <a href="#calendar" class="bar-button button">Calendar</a>
             <a href="#team" class="bar-button button">Our Team</a>
             <a href="#schools" class="bar-button button">Locations</a>
-            <a href="#resources" class="bar-button button">Resources</a>
+            <div class="dropdown">
+                <a href="#resources" class="bar-button button">Resources</a>
+                <div class="dropdown-content">
+                    <a href="#links">Links</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+<!--            <a href="#resources" class="bar-button button">Resources</a>-->
             <a href="#FAQ" class="bar-button button">FAQ</a>
             <a href="#contact" class="bar-button button">Contact Us</a>
         </div>
@@ -36,7 +45,7 @@
 
 
 
-<div class="content-mission" style="max-width:1100px" id="calendar">
+<div class="content-mission" style="max-width:1100px">
     <div class="row-mission padding-mission64" id="mission">
         <table>
             <tr>
@@ -53,7 +62,7 @@
     <hr>
 
 
-    <img src="CALENDAR.png" style="width:100%;"/>
+    <img src="CALENDAR.png" style="width:100%;" id="calendar"/>
     <div class="calendar" align="center">
         <script src="https://calendar.time.ly/embed.js" data-src="https://calendar.time.ly/tdo4oo2k/" data-max-height="0" id="timely_script" class="timely-script"></script>
     </div>
@@ -181,7 +190,7 @@
     </div>
 
     <hr>
-    <img src="RESOURCES.png" id="resources" style="width:100%;"/>
+    <img src="RESOURCES.png" id="links" style="width:100%;"/>
 
     <div class="row-resource schools">
     <div class="column-resource">
@@ -210,14 +219,27 @@
             <a href="https://www.playcodemonkey.com/"> <img class= onlineresource src="https://static.wixstatic.com/media/cfb250_bbd5571924094681b7f0fe07ffe553b1~mv2.png/v1/fill/w_500,h_236,al_c,q_80,usm_0.66_1.00_0.01/cfb250_bbd5571924094681b7f0fe07ffe553b1~mv2.webp" alt="codingmonkey" style="width:100%;"></a>
         </div>
         <div class="column-resource">
-            <a href="http://www.crunchzilla.com/code-monster"> <img class= onlineresource src="http://www.crunchzilla.com/cm/monster2.png" alt="codemonster" style="width:100%;" height="275"></a>
+            <a href="https://codepen.io/"> <img class= onlineresource src="https://static.wixstatic.com/media/cfb250_e333fbad5aff430db496b8270624f63c~mv2.png/v1/fill/w_960,h_480,al_c,lg_1,q_85/cfb250_e333fbad5aff430db496b8270624f63c~mv2.webp" alt="codepen" style="width:100%;"></a>
         </div>
         <div class="column-resource">
             <a href="http://spritebox.com/flash.html"> <img class= onlineresource src="https://static.wixstatic.com/media/cfb250_ba8dcb61e60b4758a71b9ee59e4fbc98~mv2.png/v1/fill/w_370,h_230,al_c,q_80,usm_0.66_1.00_0.01/cfb250_ba8dcb61e60b4758a71b9ee59e4fbc98~mv2.webp" alt="spritebox" style="width:100%;"></a>
         </div>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/dist/pa-embed-player.min.js" async></script>
+    <div class="pa-embed-player" style="width:100%; height:480px; display:none;"
+         data-link="https://photos.app.goo.gl/sLKCeVnsQKjCNMG38"
+         data-title="Website"
+         data-description="8 new photos added to shared album">
+        <img data-src="https://lh3.googleusercontent.com/q4Sh7xhzatJtwioyIKM9SJVQoUyEy5cyRSZ_uucJ-a66ldljjddIU_rFLQOEGfj3lZHrkugmJHyVQBVenjurlZElqgFPTq0ZkAZL8wmxz9BfuHzChOgeQ-TpIS6cPTAws126qGQ6=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/glKszwwC964fPYeJXTO3v5VMvJNLwgkiZMcBsB3jFiSkWlpJzxgr1uJhztir45BYzd_cmY0n9g5U5cpM8vhthwP5DSowKj8ZscX5Lb_n8v6NXYSb-OsMd2Dcy7skk40cHxhZXRo2=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/i3CXLh7czvSW6uFXelQj-sd9hYmfv0F9FNwMgwH1yz3l6JLm4xAfiZxfMBnr_ImHq1suSZfpng0O7DLTgSCWAl-CHy-tR9sHjPiOv812oMHmc69nLknRc3rxgcdUGilKfBSU5pjS=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/tJKffQvJKTzmV619xNsY8yHVjgT0tfDnWLXN4SiebH-gP_r9FoLcVfEWlyZgBkqsi9PZ0FUOfVtD-x4el0ZB0ViMzmHM8qjSOYR4oc5d0eCv-UKzrQOsY84-Er3j13NcA5D8EV2e=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/Rzd-J8GinokvxPYf0lnES1JQxZJh6ncyHVe6mrWOMOMSTJDQdD9ZQZXjBeblRaeZgxlpjNT5P5AenW2v3TxbFiwU6KPP5JXg93mZrwnG-x_pcAulq9lYEmizZZjsd2CRpaTV7AwQ=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/EXJdpsj5eZHittEV9YV0mY-wnI2jZ9Fx8XVU8LgT641895mpoLIimpNgobW-cSTUK6WtOT1ctRI9tCYLw7TpChJhOuGDQjwfbC9yNztEY4KpwInv5CbSnQPxMAw2PhonrlWmkmj-=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/HWGW9ZfnOIz7g-0jlerNl6yYzw269p-BKpCUmNAroPVhwsSWrHDRO04Wm8uBacgkwn58xgv_fCZitqg3VlKUMGZRzgExpm3Ro6SXXAokknJjUZHrvTQLRiOjYAGqVT_UMTULSS6E=w1920-h1080" src="" alt="" />
+        <img data-src="https://lh3.googleusercontent.com/XEJ-3yvRGDLB13btnVXRWR6DOoAGn4-dO2MmuoQrVyLT5x2EVwGTPX36bquU9B4bBj3amxBbA__KR34V6p_tcAREFhllPxrIpaBKpd-CUe0zthvA-2iK-DdyaZTl0kvXRNMoVhM9=w1920-h1080" src="" alt="" />
+    </div>
 
 
 
@@ -283,6 +305,7 @@
                 }
             });
         }
+
     </script>
     <hr>
     <img src="CONTACT.png" style="width:100%;"/>
