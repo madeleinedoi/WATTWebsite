@@ -401,3 +401,17 @@ hr{
 .opacity, .hover-opacity:hover {
     opacity: 0.60;
 }
+
+/*RESOURCES*/
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
