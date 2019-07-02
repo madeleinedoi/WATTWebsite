@@ -305,7 +305,12 @@ hr{
 }
 /*CALENDAR*/
 #calendar-image{
-    margin: -10% 0 -10% 0;
+    /*wa*/
+
+}
+.calendar{
+    max-width: 100%;
+    /*display: inline-block;*/
 }
 /*Core TEAM*/
 .center{
