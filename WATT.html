@@ -230,72 +230,8 @@
         <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/182390017@N07/albums/72157709391201017" title="WATT in the Classroom"><img src="https://live.staticflickr.com/65535/48183359311_f5f61436c6_b.jpg" width="769" height="1024" alt="WATT in the Classroom"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
     </div>
 
-    
-    <div class="container-VIDEOS">
-        <div class="mySlides">
-            <div class="numbertext">1 / 6</div>
-            <iframe style="width: 100%;" height="678" src="https://www.youtube.com/embed/xlaFbTPVJow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
 
-        <div class="mySlides">
-            <div class="numbertext">2 / 6</div>
-            <iframe style="width:100%;" height="678" src="https://www.youtube.com/embed/lENoMZZ4mpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
 
-        <div class="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <iframe style="width:100%;" height="678" src="https://www.youtube.com/embed/w94zxnFQsK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <iframe style="width:100%;" height="678" src="https://www.youtube.com/embed/Xg1dUhVI9i0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <iframe style="width:100%;" height="678" src="https://www.youtube.com/embed/XjJQBjWYDTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <iframe style="width:100%;" height="678" src="https://www.youtube.com/embed/JoKTqHCni0M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-    </div>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            // var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-    </script>
 
 <!--    <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="wattcoding" data-slug-hash="MMVVWX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MMVVWX">-->
 <!--  <span>See the Pen <a href="https://codepen.io/wattcoding/pen/MMVVWX/">-->
