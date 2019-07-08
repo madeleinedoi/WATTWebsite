@@ -410,6 +410,7 @@ hr{
     transition: 0.4s;
 }
 
+
 .active, .accordion:hover {
     background-color: rgba(210,240,241, 1);
 }
@@ -420,6 +421,7 @@ hr{
     background-color: rgba(210, 240, 241, .5);
     overflow: hidden;
 }
+
 
 .banner{
     /*width: 1600px;*/
