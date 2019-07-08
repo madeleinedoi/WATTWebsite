@@ -26,8 +26,7 @@
                     <a href="Links.html" id="#links">Links</a>
                     <a href="Photos.html" id="#photos">Photos</a>
                     <a href="FAQ.html" id="#FAQ">FAQ</a>
-                    <a href="CodePen.html">Practice Lesson 1</a>
-                    <a href="Scratch.html">Practice Lesson 2</a>
+                    <a href="CodePen.html">Practice Lesson</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -51,36 +50,31 @@
     <h1>Practice Lesson</h1>
     <h2>Let's Make a Game</h2>
     <hr>
-    <h3>1. Creating your game</h3>
+    <h3>1.Creating your game - "The Moving Platform"</h3>
+    <p>In this game you want your character to stay on the platform and not fall off your screen. Do this by using the "left and right key" to move your sprite left and right on the platform. The goal is to make your spite not fall off the screen.</p>
     <p>1. Create a new scratch file on <a href="https://scratch.mit.edu/explore/projects/games/">scratch</a>. With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community.</p>
-    <p>2. Name your scratch file. It can be your name or anything relevant to your game. Example: "Madeleine's Game"</p>
+    <p>2. Name your scratch file. It can be your name or anything relevant to your game. Example: "Moving Platform Game"</p>
     <hr>
     <h3>2. Create Your Setting</h3>
-    <p>1. Set your back drop by clicking the picture icon on the bottom right hand corner. The possibilities are endless! Your setting can be a underground cavern or under the sea.</p>
+    <p>1. Set your back drop by clicking the picture icon on the bottom right hand corner. The possibilities are endless! Your setting can be a underground cavern, under the sea and more!</p>
     <p>2. Now add your sprite. A sprite is what you will be adding functionality to (your character in the game). You can do this by clicking on the cat at the bottom right hand corner.</p>
     <img src="ScratchStep1.png" style="width:100%;" />
     <hr>
-    <h3>3. Add Your Content</h3>
-    <p> The "hr" tag helps break content apart from others through creating a line of separation from the rest of the content.</p>
-    <p>1. For the first section of your website use a "h3" tag for your title.</p>
-    <p>2. For your more lengthy paragraphs use the "p" tag to display text onto your screen.</p>
-    <p>3. Note: to center text you can create a class called "center" which will center all your text for you in CSS. To create a class in css use a "." and then name the class. Place all of the class content in "{}" brackets.</p>
-    <p> Extra: You can also change the text color of your titles and paragraphs. In CSS, put the name of the tag you're using and then inside the brackets put color: "purple". To change the font you're using include in the brackets font-family: "'Times New Roman', serif". This allows for you to create a font family which allows you to prioritize a list of fonts you would like to use. For example if Times New Roman cannot be accessed the text would be changed to serif. </p>
-    <img src="codepen step 3.png" style="width:100%;"/>
-    <h3>4. Adding Images</h3>
-    <p>In HTML images are defined using a "img" tag. Use img src= " " to specify a URL in which you want to access a photo from. The "alt" tag is used a a description of your picture. This is helpful if your website doesnt load the picture, the user will still be able to know what the image was supposed to be.</p>
-    <p>Note: You cannot just copy the image url. Right click and copy the image address and then paste that for the image src.</p>
-    <img src="ourmissioncodepen.png" style="width:100%;"/>
-    <h3>5. Adding Videos</h3>
-    <p>The tag iframe is used when you want to display another web page in your web page such as a youtube video.</p>
-    <p>1. Use the format of "iframe src="youtube-video"</p>
-    <p>2. You can also change the height and width of a image or video by adding within the iframe tag "height=num" and "width=num"</p>
-    <img src="addedvideocodepen.png" style="width:100%;"/>
-    <hr>
-    <h3>6. Creating "DIVS"</h3>
-    <p>A div element creates a section or division. You can identify a div by giving it a class name.</p>
-    <p>1. For example: To center a section of elements create a class in your css file. To create a class for a div use "div.nameofclass" and then brackets</p>
-    <p>2. For the purpose of this lesson create a class that will center the text of your div elements. To center text use "text-align:center;</p>
-    <img src="divelementcodepen.png" style="width:100%;" /></div>
+    <h3>3. Add Functionality</h3>
+    <p>Now it's time to do your coding</p>
+    <p>1. For your sprite character add an event starter in "events".</p>
+    <p>2. Add controls. For the purpose of this game we want our sprite to move left and right. Do this by going into your "controls" and attaching a forever loop onto your event starter. This means for as long as you do an action
+        the event will keep occurring.</p>
+    <p>3. Within the forever loop add a if statement from the "controls". In your if statement add a sensing control by using the "when key is pressed" function.</p>
+    <p>4. In the if statement add motion controls. To move your sprite to the right use "point in the direction 90" and "change x by 10".</p>
+    <p>5. Repeat steps 1-4 with the exception that in order to move your sprite to the left you will use "point in the direction -90" and "change x by -10" </p>
+    <img src="ScratchStep2.png" style="width:100%;">
+    <h3>4. Try It Yourself</h3>
+    <p>1. Add a platform object sprite</p>
+    <p>2. Add a event starter event for your platform sprite and in sensing add a "reset timer function function". This means if you click the event starter the game will restart.</p>
+    <p>Your turn: Try to make the platform sprite object move left and right. Hint: use the "go to x: and y: and "move __ steps" functions.</p>
+    <img src="ScratchStep3.png" style="width:100%;">
+    <h3>5. Adding Game Components</h3>
+   </div>
 </body>
 </html>
