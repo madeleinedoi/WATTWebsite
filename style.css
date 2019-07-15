@@ -159,10 +159,10 @@ h1, h2, h3, h4, h5, h6 {
     width:100%;
     overflow: hidden;
 }
-.bar .button{
-    white-space:normal;
+/*.bar .button{*/
+/*    white-space:normal;*/
 
-}
+/*}*/
 .bar .bar-button {
     padding: 8px 16px;
     float: left;
@@ -170,6 +170,7 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     display: block;
     outline: 0;
+    white-space:normal;
 }
 .btn .button{
     user-select: none;
@@ -182,6 +183,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: inherit;
     text-align: center;
     cursor: pointer;
+    user-select: none;
 
 }
 .button:hover{
@@ -558,4 +560,10 @@ hr{
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+.center-iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
