@@ -601,6 +601,11 @@ hr{
     background: #3B5998;
     color: white;
 }
+
+.fa-envelope{
+    background: rgba(0,111,255,0.78);
+    color: white;
+}
 /*bottom navbar*/
 .navbar-bottom a {
     float: left;
