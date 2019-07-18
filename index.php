@@ -1,1 +1,1 @@
-<?php header( 'Location: WATT.html' ) ;  ?>
+<?php header( 'Location: navbar.html' ) ;  ?>
