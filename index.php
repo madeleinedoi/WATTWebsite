@@ -1,1 +1,1 @@
-<?php header( 'Location: navbar.html' ) ;  ?>
+<?php header( 'Location: HomePage.html' ) ;  ?>
