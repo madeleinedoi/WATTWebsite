@@ -9,7 +9,35 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type=logo" href="logo.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .m {
+          position: relative;
+          animation-name: example;
+          animation-duration: 2s;
+      }
 
+    @keyframes example {
+        0%   {left:200px; top:0px;}
+        /*25%  {left:0px; top:200px;}*/
+        /*50%  {left:200px; top:200px;}*/
+        /*75%  {left:200px; top:0px;}*/
+        100% {left:0px; top:0px;}
+    }
+    .n {
+        position: relative;
+        animation-name: ex;
+        animation-duration: 2s;
+    }
+
+    @keyframes ex {
+        0%   {left:-200px; top:0px;}
+        /*25%  {left:0px; top:200px;}*/
+        /*50%  {left:200px; top:200px;}*/
+        /*75%  {left:200px; top:0px;}*/
+        100% {left:0px; top:0px;}
+    }
+
+</style>
 </head>
 <body>
 <script src="WATT.js"></script>
@@ -44,7 +72,7 @@
 
 <!--    </div>-->
 <!--</div>-->
-
+<div class="n">
 <header>
 
     <!-- Slideshow container -->
@@ -79,8 +107,8 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div></header>
 
-
-
+</div>
+<div class="m">
 <div class="content-mission" style="max-width:1100px">
     <div class="row-mission padding-mission64" id="mission">
         <table>
@@ -95,11 +123,14 @@
             </tr>
         </table>
     </div>
-    <hr>
+</div>
+</div>
 
 
 
-
+<div class="m">
+    <div class="content-mission" style="max-width:1100px">
+        <div class="row-mission padding-mission64" id="mission">
 
     <img src="LOCATIONS.png" style="width:100%;" id="schools"/>
     <div class="schools" id="schools">
@@ -139,8 +170,9 @@
         </div>
     </div>
 
-
-
+        </div>
+    </div>
+</div>
 
     <script>
         // photo slideshow banner homepage
