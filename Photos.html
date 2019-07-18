@@ -8,13 +8,27 @@
     <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type=logo" href="logo.png"/>
+<style>
+    .m {
+        position: relative;
+        animation-name: example;
+        animation-duration: 2s;
+    }
 
+    @keyframes example {
+        0%   {left:200px; top:0px;}
+        /*25%  {left:0px; top:200px;}*/
+        /*50%  {left:200px; top:200px;}*/
+        /*75%  {left:200px; top:0px;}*/
+        100% {left:0px; top:0px;}
+    }
+</style>
 </head>
 <body>
 <script src="WATT.js"></script>
 
 
-
+<div class="m">
 <div class="content-mission" style="max-width:1100px">
     <div class="row-mission padding-mission64" id="mission">
 
@@ -22,12 +36,8 @@
         <div style="text-align: center;">
             <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/182390017@N07/albums/72157709391201017" title="WATT in the Classroom"><img src="https://live.staticflickr.com/65535/48183359311_f5f61436c6_b.jpg" width="678" height="850" alt="WATT in the Classroom"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
         </div>
-
-
-
-
-
-
+    </div>
+</div>
 </div>
 </body>
 </html>

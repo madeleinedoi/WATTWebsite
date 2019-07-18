@@ -16,12 +16,25 @@
         margin-right: auto;
         width: 50%;
     }
+    .m {
+        position: relative;
+        animation-name: example;
+        animation-duration: 2s;
+    }
+
+    @keyframes example {
+        0%   {left:200px; top:0px;}
+        /*25%  {left:0px; top:200px;}*/
+        /*50%  {left:200px; top:200px;}*/
+        /*75%  {left:200px; top:0px;}*/
+        100% {left:0px; top:0px;}
+    }
 </style>
 </head>
 <body>
 <script src="WATT.js"></script>
 
-
+<div class="m">
 <div class="content-mission" style="max-width:1100px">
     <div class="row-mission padding-mission64" id="mission">
         <img src="Practice.png" style="width:100%;"/>
@@ -66,5 +79,6 @@
     <p>6. Under the if add the repeat control. Under that add "change y by 10" because if the sprite is touching the green we want to to go up not off the screen.</p>
     <img src="ScratchStep4.png" style="width:100%;">
    </div>
+</div>
 </body>
 </html>
