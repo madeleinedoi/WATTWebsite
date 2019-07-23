@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>WATT Website</title>
-    <script src="../WATT.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type=logo" href="Team Images/logo.png"/>
-
 </head>
 <body>
-
+<div class="m">
     <div class="content-mission" style="max-width:1100px">
         <div class="row-mission padding-mission64" id="mission">
-<h1>Test Your CS</h1>
-<div id="quiz"></div>
-<button id="submit">Get Results</button>
-<div id="results"></div>
+            <h1>Test Your CS</h1>
+            <div id="quiz"></div>
+            <button id="submit">Get Results</button>
+            <div id="results"></div>
         </div>
     </div>
-
+</div>
 <script>
     var myQuestions = [
         {
@@ -67,7 +65,7 @@
                 c: ' important '
             },
             correctAnswer: 'a'
-        }
+        },
     ];
 
     var quizContainer = document.getElementById('quiz');
@@ -95,8 +93,8 @@
                     // ...add an html radio button
                     answers.push(
                         '<label>'
-                        + '<input type="radio" name="question '+ i + " "+'" value= "' +" "+ letter +'  ">'
-                        + letter + " " +': '
+                        + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+                        + letter + ': '
                         + questions[i].answers[letter]
                         + '</label>'
                     );
