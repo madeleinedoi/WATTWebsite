@@ -432,7 +432,7 @@ hr{
 .panel {
     padding: 0 18px;
     display: none;
-    background-color: rgba(210, 240, 241, .5);
+    background-color: rgba(210, 240, 241, 1);
     overflow: hidden;
 }
 

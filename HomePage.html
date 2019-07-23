@@ -9,13 +9,51 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type=logo" href="Team%20Images/logo.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .accordion {
+            background-color: ghostwhite;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
 
+
+        .active, .accordion:hover {
+            background-color: rgba(210,240,241, 1);
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: rgba(210, 240, 241, .5);
+            overflow: hidden;
+        }
+        .m {
+            position: relative;
+            animation-name: example;
+            animation-duration: 2s;
+        }
+
+        @keyframes example {
+            0%   {left:200px; top:0px;}
+            /*25%  {left:0px; top:200px;}*/
+            /*50%  {left:200px; top:200px;}*/
+            /*75%  {left:200px; top:0px;}*/
+            100% {left:0px; top:0px;}
+        }
+    </style>
 </head>
 <body>
 
 
 <script src="WATT.js"></script>
-<iframe src="HTML/WATT.html" frameborder="0" name="test" id="WATT" width=100% height=945 class="center-iframe"></iframe>
+<iframe src="WATT.html" frameborder="0" name="test" id="WATT" width=100% height=945 class="center-iframe"></iframe>
 <div class="top-nav">
     <div class="bar white-banner padding-nav nav-box" style="letter-spacing:4px;">
         <a class="bar-button button center-iframe" onclick="test.location.href='WATT.html';document.getElementById('WATT')">WATT CODING</a>
@@ -28,7 +66,7 @@
                     <a class="center" onclick="test.location.href='Resources.html';document.getElementById('WATT')">Resources</a>
                     <a class="center" onclick="test.location.href='Links.html';document.getElementById('WATT')" id="#links">Links</a>
                     <a class="center" onclick="test.location.href='Photos.html';document.getElementById('WATT')"id="#photos">Photos</a>
-                    <a class="center" onclick="test.location.href='multiplechoice.html';document.getElementById('WATT')"id="#photos">Photos</a>
+                    <a class="center" onclick="test.location.href='testmultiple.html';document.getElementById('WATT')">Quiz</a>
 <!--                    <a class="center" onclick="test.location.href='FAQ.html';document.getElementById('WATT')" id="#FAQ">FAQ</a>-->
                     <a class="center" onclick="test.location.href='CodePen.html';document.getElementById('WATT')">Practice Lesson 1</a>
                     <a class="center" onclick="test.location.href='Scratch.html';document.getElementById('WATT')">Practice Lesson 2</a>
@@ -43,7 +81,7 @@
 
 <div class="navbar-bottom">
     <div class="bar white-banner padding-nav nav-box" style="letter-spacing:4px;">
-        <a class="typeform-share bar-button button" href="HTML/FAQ.html" data-mode="popup" target="_blank">Questions?</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        <a class="typeform-share bar-button button" href="FAQ.html" data-mode="popup">Questions?</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
         <a class="bar-button button" href="https://www.gofundme.com/f/watt-coding-supporting-girls-in-the-stem-field&rcid=r01-156339912847-ddb18f7e12b24938&pc=ot_co_campmgmt_w">Donate</a>
         <div class="right hide-small">
         <a href="https://www.instagram.com/wattcoding/?hl=en" class="fa fa-instagram"></a>
