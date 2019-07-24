@@ -652,9 +652,7 @@ hr{
     font-size: 20px;
     background-color: #297;
     color: #fff;
-    border: 0px;
-    border-radius: 3px;
-    padding: 20px;
+    border: 0px;;
     cursor: pointer;
     margin-bottom: 20px;
 }
