@@ -4,141 +4,419 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>WATT Website</title>
-    <script src="WATT.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type=logo" href="Team Images/logo.png"/>
+    <style>
+        .m {
+            position: relative;
+            animation-name: example;
+            animation-duration: 2s;
+        }
+
+        @keyframes example {
+            0%   {left:200px; top:0px;}
+            /*25%  {left:0px; top:200px;}*/
+            /*50%  {left:200px; top:200px;}*/
+            /*75%  {left:200px; top:0px;}*/
+            100% {left:0px; top:0px;}
+        }
+        .vl {
+            border-left: 2px solid black;
+            height: 100%;
+        }
+    </style>
+
+
 
 </head>
 <body>
 
-<div class="content-mission" style="max-width:1100px">
-    <div class="row-mission padding-mission64" id="mission">
-        <h1>Test Your CS</h1>
-        <div id="quiz"></div>
-        <button id="submit">Get Results</button>
-        <div id="results"></div>
+<div class="m">
+    <div class="content-mission" style="max-width:1100px;" height="100px">
+        <div class="row-mission padding-mission64" id="mission">
+
+            <h1>Test Your CS</h1>
+            <hr>
+            <div class="padding-right-team"id="quiz"></div>
+            <div class="padding-left-team"id="quiz2"></div>
+            <button id="submit">Submit Quiz</button>
+            <div id="results"></div>
+            <hr>
+        </div>
     </div>
 </div>
-
 <script>
-    var myQuestions = [
-        {
-            question: " What does HTML Stand For?",
-            answers: {
-                a: ' Hyperlinks and Text Markup Language ',
-                b: ' Hyper Text Markup Language ',
-                c: ' High Tech Multiple Languages '
-            },
-            correctAnswer: 'b'
-        },
-        {
-            question: " Choose the correct HTMl element for the largest heading?",
-            answers: {
-                a: ' head ',
-                b: ' h6 ',
-                c: ' h1 '
-            },
-            correctAnswer: 'c'
-        },
-        {
-            question: " What does CSS stand for?",
-            answers: {
-                a: ' Cascading Style Sheets ',
-                b: ' Computer Style Sheets ',
-                c: ' Creative Style Sheets '
-            },
-            correctAnswer: 'a'
-        }
-    ];
-
-    var quizContainer = document.getElementById('quiz');
-    var resultsContainer = document.getElementById('results');
-    var submitButton = document.getElementById('submit');
-
-    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
-
-    function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-
-        function showQuestions(questions, quizContainer){
-            // we'll need a place to store the output and the answer choices
-            var output = [];
-            var answers;
-
-            // for each question...
-            for(var i=0; i<questions.length; i++){
-
-                // first reset the list of answers
-                answers = [];
-
-                // for each available answer...
-                for(letter in questions[i].answers){
-
-                    // ...add an html radio button
+    (function() {
+        function buildQuiz1() {
+            const output = [];
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+                const answers = [];
+                for (letter in currentQuestion.answers) {
                     answers.push(
-                        '<label>'
-                        + '<input type="radio" name="question '+ i + " "+'" value= "' +" "+ letter +'  ">'
-                        + letter + " " +': '
-                        + questions[i].answers[letter]
-                        + '</label>'
+                        `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
                     );
                 }
-
-                // add this question and its answers to the output
                 output.push(
-                    '<div class="question">' + questions[i].question + '</div>'
-                    + '<div class="answers">' + answers.join('') + '</div>'
+                    `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
                 );
-            }
-
-            // finally combine our output list into one string of html and put it on the page
-            quizContainer.innerHTML = output.join('');
+            });
+            quizContainer.innerHTML = output.join("");
+        }
+        function buildQuiz2() {
+            const output = [];
+            myQuestions2.forEach((currentQuestion, questionNumber) => {
+                const answers = [];
+                for (letter in currentQuestion.answers) {
+                    answers.push(
+                        `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+                    );
+                }
+                output.push(
+                    `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
+                );
+            });
+            quizContainer2.innerHTML = output.join("");
         }
 
-
-        function showResults(questions, quizContainer, resultsContainer){
-
-            // gather answer containers from our quiz
-            var answerContainers = quizContainer.querySelectorAll('.answers');
-
-            // keep track of user's answers
-            var userAnswer = '';
-            var numCorrect = 0;
-
-            // for each question...
-            for(var i=0; i<questions.length; i++){
-
-                // find selected answer
-                userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-
-                // if answer is correct
-                if(userAnswer===questions[i].correctAnswer){
-                    // add to the number of correct answers
+        function showResults() {
+            const answerContainers = quizContainer.querySelectorAll(".answers");
+            const answerContainers2 = quizContainer2.querySelectorAll(".answers");
+            let numCorrect = 0;
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+                if (userAnswer === currentQuestion.correctAnswer) {
                     numCorrect++;
-
-                    // color the answers green
-                    answerContainers[i].style.color = 'lightgreen';
-                }
-                // if answer is wrong or blank
-                else{
+                    answerContainers[questionNumber].style.color = "lightgreen";
+                } else {
+                    // if answer is wrong or blank
                     // color the answers red
-                    answerContainers[i].style.color = 'red';
+                    answerContainers[questionNumber].style.color = "red";
                 }
-            }
+            });
+            // myQuestions2.forEach((currentQuestion, questionNumber) => {
+            //     const answerContainer2 = answerContainers2[questionNumber];
+            //     const selector = `input[name=question${questionNumber}]:checked`;
+            //     const userAnswer = (answerContainer2.querySelector(selector) || {}).value;
+            //     if (userAnswer === currentQuestion.correctAnswer) {
+            //         numCorrect++;
+            //         answerContainers2[questionNumber].style.color = "lightgreen";
+            //     } else {
+            //         // if answer is wrong or blank
+            //         // color the answers red
+            //         answerContainers2[questionNumber].style.color = "red";
+            //     }
+            // });
 
             // show number of correct answers out of total
-            resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length+myQuestions2.length}`;
         }
 
-        // show questions right away
-        showQuestions(questions, quizContainer);
+        const quizContainer = document.getElementById("quiz");
+        const quizContainer2 = document.getElementById("quiz2");
+        const resultsContainer = document.getElementById("results");
+        const submitButton = document.getElementById("submit");
+        // const myQuestions = [
+        //     {
+        //         question: " 1. What does HTML Stand For?",
+        //         answers: {
+        //             a: ' Hyperlinks and Text Markup Language ',
+        //             b: ' Hyper Text Markup Language ',
+        //             c: ' High Tech Multiple Languages '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        //     {
+        //         question: " 2. Choose the correct HTMl element for the largest heading?",
+        //         answers: {
+        //             a: ' head ',
+        //             b: ' h6 ',
+        //             c: ' h1 '
+        //         },
+        //         correctAnswer: 'c'
+        //     },
+        //     {
+        //         question: " 3. What does CSS stand for?",
+        //         answers: {
+        //             a: ' Cascading Style Sheets ',
+        //             b: ' Computer Style Sheets ',
+        //             c: ' Creative Style Sheets '
+        //         },
+        //         correctAnswer: 'a'
+        //     },
+        //     {
+        //         question: " 4. What is the correct HTML element for inserting a line break?",
+        //         answers: {
+        //             a: ' break ',
+        //             b: ' br ',
+        //             c: ' bk '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        //     {
+        //         question: " 5. Choose the correct HTML element to define important text.",
+        //         answers: {
+        //             a: ' strong ',
+        //             b: ' bold ',
+        //             c: ' important '
+        //         },
+        //         correctAnswer: 'a'
+        //     },
+        //     {
+        //         question: " 6. Choose the correct HTML element to define emphasized text",
+        //         answers: {
+        //             a: ' bold ',
+        //             b: ' em ',
+        //             c: ' strong '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        //     {
+        //         question: " 7. Which CSS property controls the text size?",
+        //         answers: {
+        //             a: ' text-size ',
+        //             b: ' font-num ',
+        //             c: ' font-size '
+        //         },
+        //         correctAnswer: 'c'
+        //     },
+        //     {
+        //         question: " 8. What is the correct CSS syntax for making all the p elements bold?",
+        //         answers: {
+        //             a: ' p style = text-size:bold; ',
+        //             b: ' p style = font-size:bold; ',
+        //             c: ' p=bold '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        //     {
+        //         question: " 9. Which character is used to indicate an end tag?",
+        //         answers: {
+        //             a: ' / ',
+        //             b: ' *',
+        //             c: ' <'
+        //         },
+        //         correctAnswer: 'a'
+        //     },
+        //     {
+        //         question: " 10. Which of these elements are all table elements?",
+        //         answers: {
+        //             a: ' table, tr, td ',
+        //             b: ' table, head, foot',
+        //             c: ' table, tr, tb'
+        //         },
+        //         correctAnswer: 'a'
+        //     },
+        //     {
+        //         question: " 11. How can you make a numbered list?",
+        //         answers: {
+        //             a: ' dl ',
+        //             b: ' ul ',
+        //             c: ' ol '
+        //         },
+        //         correctAnswer: 'c'
+        //     },
+        //     {
+        //         question: " 12. How can you make a bulleted list?",
+        //         answers: {
+        //             a: ' dl  ',
+        //             b: ' ul ',
+        //             c: ' ol '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        //     {
+        //         question: " 13. What is the default value of the position property?",
+        //         answers: {
+        //             a: ' static ',
+        //             b: ' absolute ',
+        //             c: ' fixed '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        //     {
+        //         question: " 14. An iframe is used to display a web page within a web page.",
+        //         answers: {
+        //             a: ' true ',
+        //             b: ' false ',
+        //             c: ' What is a iframe? '
+        //         },
+        //         correctAnswer: 'a'
+        //     },
+        //     {
+        //         question: " 15. In HTML, which attribute is used to specify that an input field must be filled out? ",
+        //         answers: {
+        //             a: ' necessary ',
+        //             b: ' required ',
+        //             c: ' validate '
+        //         },
+        //         correctAnswer: 'b'
+        //     },
+        // ];
+        const myQuestions = [
+            {
+                question: " 1. What does HTML Stand For?",
+                answers: {
+                    a: ' Hyperlinks and Text Markup Language ',
+                    b: ' Hyper Text Markup Language ',
+                    c: ' High Tech Multiple Languages '
+                },
+                correctAnswer: 'b'
+            },
+            {
+                question: " 2. Choose the correct HTMl element for the largest heading?",
+                answers: {
+                    a: ' head ',
+                    b: ' h6 ',
+                    c: ' h1 '
+                },
+                correctAnswer: 'c'
+            },
+            {
+                question: " 3. What does CSS stand for?",
+                answers: {
+                    a: ' Cascading Style Sheets ',
+                    b: ' Computer Style Sheets ',
+                    c: ' Creative Style Sheets '
+                },
+                correctAnswer: 'a'
+            },
+            {
+                question: " 4. What is the correct HTML element for inserting a line break?",
+                answers: {
+                    a: ' break ',
+                    b: ' br ',
+                    c: ' bk '
+                },
+                correctAnswer: 'b'
+            },
+            {
+                question: " 5. Choose the correct HTML element to define important text.",
+                answers: {
+                    a: ' strong ',
+                    b: ' bold ',
+                    c: ' important '
+                },
+                correctAnswer: 'a'
+            },
+            {
+                question: " 6. Choose the correct HTML element to define emphasized text",
+                answers: {
+                    a: ' bold ',
+                    b: ' em ',
+                    c: ' strong '
+                },
+                correctAnswer: 'b'
+            },
+            {
+                question: " 7. Which CSS property controls the text size?",
+                answers: {
+                    a: ' text-size ',
+                    b: ' font-num ',
+                    c: ' font-size '
+                },
+                correctAnswer: 'c'
+            },
+            {
+                question: " 8. What is the correct CSS syntax for making all the p elements bold?",
+                answers: {
+                    a: ' p style = text-size:bold; ',
+                    b: ' p style = font-size:bold; ',
+                    c: ' p=bold '
+                },
+                correctAnswer: 'b'
+            },
+        ];
+        const myQuestions2 = [
+
+            {
+                question: " 9. Which character is used to indicate an end tag?",
+                answers: {
+                    a: ' / ',
+                    b: ' *',
+                    c: ' <'
+                },
+                correctAnswer: 'a'
+            },
+            {
+                question: " 10. Which of these elements are all table elements?",
+                answers: {
+                    a: ' table, tr, td ',
+                    b: ' table, head, foot',
+                    c: ' table, tr, tb'
+                },
+                correctAnswer: 'a'
+            },
+            {
+                question: " 11. How can you make a numbered list?",
+                answers: {
+                    a: ' dl ',
+                    b: ' ul ',
+                    c: ' ol '
+                },
+                correctAnswer: 'c'
+            },
+            {
+                question: " 12. How can you make a bulleted list?",
+                answers: {
+                    a: ' dl  ',
+                    b: ' ul ',
+                    c: ' ol '
+                },
+                correctAnswer: 'b'
+            },
+            {
+                question: " 13. What is the default value of the position property?",
+                answers: {
+                    a: ' static ',
+                    b: ' absolute ',
+                    c: ' fixed '
+                },
+                correctAnswer: 'b'
+            },
+            {
+                question: " 14. An iframe is used to display a web page within a web page.",
+                answers: {
+                    a: ' true ',
+                    b: ' false ',
+                    c: ' What is a iframe? '
+                },
+                correctAnswer: 'a'
+            },
+            {
+                question: " 15. In HTML, which attribute is used to specify that an input field must be filled out? ",
+                answers: {
+                    a: ' necessary ',
+                    b: ' required ',
+                    c: ' validate '
+                },
+                correctAnswer: 'b'
+            },
+        ];
+
+        // display quiz right away
+        buildQuiz1();
+        buildQuiz2();
 
         // on submit, show results
-        submitButton.onclick = function(){
-            showResults(questions, quizContainer, resultsContainer);
-        }
+        submitButton.addEventListener("click", showResults);
+    })();
 
-    }
+
+
+
 </script>
 </body>
 </html>

@@ -669,6 +669,15 @@ hr{
 .answers label{
     display: block;
 }
+.question2{
+    font-weight: 600;
+}
+.answers2 {
+    margin-bottom: 20px;
+}
+.answers2 label{
+    display: block;
+}
 #submit{
     font-family: sans-serif;
     font-size: 20px;
