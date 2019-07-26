@@ -21,16 +21,27 @@
         /*75%  {left:200px; top:0px;}*/
             100% {left:0px; top:0px;}
         }
+        .vl {
+            border-left: 2px solid black;
+            height: 100%;
+        }
     </style>
+
+
+
 </head>
 <body>
+<div class="vl"></div>
 <div class="m">
     <div class="content-mission" style="max-width:1100px">
         <div class="row-mission padding-mission64" id="mission">
+
             <h1>Test Your CS</h1>
+            <hr>
             <div id="quiz"></div>
             <button id="submit">Submit Quiz</button>
             <div id="results"></div>
+            <hr>
         </div>
     </div>
 </div>
@@ -68,6 +79,8 @@
                     numCorrect++;
                     answerContainers[questionNumber].style.color = "lightgreen";
                 } else {
+                    // if answer is wrong or blank
+                    // color the answers red
                     answerContainers[questionNumber].style.color = "red";
                 }
             });
