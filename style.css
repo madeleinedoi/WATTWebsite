@@ -485,6 +485,7 @@ hr{
     max-width: 1000px;
     position: relative;
     margin: auto;
+    padding-top: 50px;
 }
 
 /* Hide the images by default */
