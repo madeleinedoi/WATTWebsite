@@ -346,6 +346,7 @@ hr{
 
 /*SCHOOLS*/
 
+
 .schools{
     display: inline-block;
     justify-items: center;
@@ -358,7 +359,6 @@ hr{
 }
 #stAl {
     float:left;
-
     /*width:100px;*/
 }
 
